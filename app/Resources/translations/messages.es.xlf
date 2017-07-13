@@ -305,6 +305,10 @@
                 <source>menu.homepage</source>
                 <target>Inicio</target>
             </trans-unit>
+            <trans-unit id="menu.news">
+                <source>menu.news</source>
+                <target>Noticias</target>
+            </trans-unit>
             <trans-unit id="menu.admin">
                 <source>menu.admin</source>
                 <target>Administración</target>

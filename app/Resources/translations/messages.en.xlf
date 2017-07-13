@@ -311,6 +311,10 @@
                 <source>menu.admin</source>
                 <target>Backend</target>
             </trans-unit>
+            <trans-unit id="menu.news">
+                <source>menu.news</source>
+                <target>News</target>
+            </trans-unit>
             <trans-unit id="menu.logout">
                 <source>menu.logout</source>
                 <target>Logout</target>

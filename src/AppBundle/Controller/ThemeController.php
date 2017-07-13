@@ -36,7 +36,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ThemeController extends Controller
 {
     /**
-     * @Route("/", defaults={"page": "1", "_format"="html"}, name="blog_index")
+     * @Route("/", defaults={"page": "1", "_format"="html"}, name="theme_index")
      * @Method("GET")
      * @Cache(smaxage="10")
      *
@@ -55,7 +55,7 @@ class ThemeController extends Controller
     }
 
     /**
-     * @Route("/posts/{slug}", name="blog_post")
+     * @Route("/posts/{slug}", name="theme_post")
      * @Method("GET")
      *
      * NOTE: The $post controller argument is automatically injected by Symfony
