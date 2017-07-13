@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+
+
+            <section class="imagebg height-50">
+                <div class="background-image-holder background--bottom">
+                    <img alt="image" src="{{ asset('public/images/header2.jpg') }}" />
+                </div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1>Portfolio</h1>
+                            <p class="lead">Showcase selected projects in a sylish grid arrangement.</p>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </section>
+            <section class="wide-grid">
+                <div class="masonry">
+                    <div class="masonry__filters text-center" data-filter-all-text="Show All"></div>
+                    <div class="masonry__container masonry--animate">
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="branding">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work10.jpg') }}" />
+                                    <h5>Wave Poster</h5>
+                                    <span>
+                                        <em>Branding & Identity</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="branding">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work2.jpg') }}" />
+                                    <h5>Michael Andrews</h5>
+                                    <span>
+                                        <em>Branding & Identity</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="digital">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work6.jpg') }}" />
+                                    <h5>Freehance</h5>
+                                    <span>
+                                        <em>iOS Application</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="digital">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work12.jpg') }}" />
+                                    <h5>Tesla Remote</h5>
+                                    <span>
+                                        <em>Apple Watch Application</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="packaging">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work7.jpg') }}" />
+                                    <h5>Pillar Stationary</h5>
+                                    <span>
+                                        <em>Product Packaging</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="digital">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work14.jpg') }}" />
+                                    <h5>Upstarter</h5>
+                                    <span>
+                                        <em>Web Platform</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="packaging">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work5.jpg') }}" />
+                                    <h5>Authentic Apparel</h5>
+                                    <span>
+                                        <em>Product Packaging</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="digital">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work18.jpg') }}" />
+                                    <h5>Yield</h5>
+                                    <span>
+                                        <em>Digital Storefront</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                        <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="packaging">
+                            <a href="#">
+                                <div class="portfolio-item portfolio-item-1 text-center">
+                                    <img alt="pic" src="{{ asset('public/images/work17.jpg') }}" />
+                                    <h5>Organic Spice Co</h5>
+                                    <span>
+                                        <em>Product Packaging</em>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--end item-->
+                    </div>
+                    <!--end masonry container-->
+                </div>
+            </section>
+            
+{% endblock %}

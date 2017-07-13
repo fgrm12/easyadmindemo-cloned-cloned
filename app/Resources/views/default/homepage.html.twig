@@ -1,0 +1,591 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'homepage' %}
+
+{#
+    the homepage is a special page which displays neither a header nor a footer.
+    this is done with the 'trick' of defining empty Twig blocks without any content
+#}
+
+{% block body %}
+<div class="main-container transition--fade">
+    <section class="height-100 imagebg cover cover-1 parallax" data-overlay="3">
+        <div class="background-image-holder">
+            <img alt="image" src="{{ asset('public/images/hero1.jpg') }}" />
+        </div>
+        <div class="container pos-vertical-center">
+            <div class="row">
+                <div class="col-sm-6 text-right text-center-xs">
+                    <img class="logo" alt="Pillar" src="{{ asset('public/images/logo-large-light.png') }}" />
+                </div>
+                <div class="col-sm-6 text-center-xs">
+                    <p class="lead">
+                        A beautiful collection of
+                        <br /> hand-crafted web components
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="modal-instance modal-video-1">
+                        <a class="btn btn--primary modal-trigger" href="#">
+                            <span class="btn__text">
+                                &#9658; &nbsp; Watch The Overview
+                            </span>
+                        </a>
+                        <div class="modal-container">
+                            <div class="modal-content bg-dark" data-width="100%" data-height="80%">
+                                <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                            </div>
+                            <!--end of modal-content-->
+                        </div>
+                        <!--end of modal-container-->
+                    </div>
+                    <!--end of modal instance-->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 pos-absolute pos-bottom">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    {% embed 'template/social-list.html.twig' %}{% endembed %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="space-bottom--sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h3>Digital, Delivered.</h3>
+                    <p class="lead">
+                        Pillar is a team of passionate designers, developers and artists working in print and digital.
+                    </p>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section class="wide-grid masonry">
+        <div class="masonry__filters text-center" data-filter-all-text="Show All"></div>
+        <div class="masonry__container">
+            <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="digital">
+                <a href="#">
+                    <div class="hover-element hover-element-1" data-title-position="top,right">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/work6.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h5>Freehance</h5>
+                                <span>
+                                    <em>iOS Application</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="branding">
+                <a href="#">
+                    <div class="hover-element hover-element-1" data-title-position="top,right">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/work2.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h5>Michael Andrews</h5>
+                                <span>
+                                    <em>Branding & Identity</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="branding">
+                <a href="#">
+                    <div class="hover-element hover-element-1" data-title-position="top,right">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/work7.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h5>Pillar Stationary</h5>
+                                <span>
+                                    <em>Branding Collateral</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="packaging">
+                <a href="#">
+                    <div class="hover-element hover-element-1" data-title-position="top,right">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/work5.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h5>Authentic Apparel</h5>
+                                <span>
+                                    <em>Packaging Design</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="branding">
+                <a href="#">
+                    <div class="hover-element hover-element-1" data-title-position="top,right">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/work10.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h5>Wave Poster</h5>
+                                <span>
+                                    <em>Logo Design</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 masonry__item" data-masonry-filter="digital">
+                <a href="#">
+                    <div class="hover-element hover-element-1" data-title-position="top,right">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/work12.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h5>Tesla Controller</h5>
+                                <span>
+                                    <em>Apple Watch Application</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </a>
+            </div>
+        </div>
+        <!--end masonry container-->
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h3>Your Creative Collective</h3>
+                    <p class="lead">
+                        Our diverse team comprises talent from a range of design disciplines working together to deliver effective solutions
+                    </p>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="hover-element member member-2" data-title-position="center,center">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/avatar-team-5.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h6>Designer</h6>
+                                <h5>Isabelle Pearce</h5>
+                            </div>
+                            <ul class="social-list pos-absolute pos-bottom">
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-vimeo"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="hover-element member member-2" data-title-position="center,center">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/avatar-team-4.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h6>Developer</h6>
+                                <h5>Sarah Inkerman</h5>
+                            </div>
+                            <ul class="social-list pos-absolute pos-bottom">
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-vimeo"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="hover-element member member-2" data-title-position="center,center">
+                        <div class="hover-element__initial">
+                            <img alt="Pic" src="{{ asset('public/images/avatar-team-6.jpg') }}" />
+                        </div>
+                        <div class="hover-element__reveal" data-overlay="9">
+                            <div class="boxed">
+                                <h6>Designer</h6>
+                                <h5>Marcus Smith</h5>
+                            </div>
+                            <ul class="social-list pos-absolute pos-bottom">
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-vimeo"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end hover element-->
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section class="imagebg section--even stats-1 parallax" data-overlay="7">
+        <div class="background-image-holder">
+            <img alt="image" src="{{ asset('public/images/hero2.jpg') }}" />
+        </div>
+        <div class="row wide-grid">
+            <div class="col-sm-3 col-xs-6">
+                <div class="feature feature-1 text-center">
+                    <i class="icon icon--lg icon-Bodybuilding"></i>
+                    <h3>16,000+</h3>
+                    <span>
+                        <em>Customers strong</em>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="feature feature-1 text-center">
+                    <i class="icon icon--lg icon-Fingerprint"></i>
+                    <h3>16</h3>
+                    <span>
+                        <em>Passionate team members</em>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="feature feature-1 text-center">
+                    <i class="icon icon--lg icon-Astronaut"></i>
+                    <h3>82</h3>
+                    <span>
+                        <em>Launched startups</em>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="feature feature-1 text-center">
+                    <i class="icon icon--lg icon-Cardigan"></i>
+                    <h3>Zero</h3>
+                    <span>
+                        <em>Plaid cardigans</em>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--end of row-->
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h3>Our Expertise</h3>
+                    <p class="lead">
+                        We work across digital and print media to deliver bold, effective identities for businesses in all industries.
+                    </p>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="feature feature-3">
+                        <div class="feature__left">
+                            <i class="icon icon-Sidebar-Window color--primary"></i>
+                        </div>
+                        <div class="feature__right">
+                            <h6>Interface Design</h6>
+                            <p>Pillar comes packed with flexible content blocks and Variant Page Builder - this makes building your perfect layout easier than ever before.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="feature feature-3">
+                        <div class="feature__left">
+                            <i class="icon icon-RGB color--primary"></i>
+                        </div>
+                        <div class="feature__right">
+                            <h6>User Interaction</h6>
+                            <p>Combine multiple purpose-built elements to craft your perfect, conversion focussed landing page - and do it all in the comfort of your browser.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="feature feature-3">
+                        <div class="feature__left">
+                            <i class="icon icon-Brain color--primary"></i>
+                        </div>
+                        <div class="feature__right">
+                            <h6>Internet Of Things</h6>
+                            <p>Clever social integrations such as Mail Chimp, Compaign Monitor and styled Twitter feeds give your site a dynamic edge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="feature feature-3">
+                        <div class="feature__left">
+                            <i class="icon icon-Astronaut color--primary"></i>
+                        </div>
+                        <div class="feature__right">
+                            <h6>Product Design</h6>
+                            <p>Flexible data attribute modifiers make customising elements fast and easy. Add overlays, scrims and adjust plugin parameters all from the HTML.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section class="testimonial testimonial-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-6">
+                    <div class="testimonial__text">
+                        <blockquote>
+                            &ldquo;I was a blown away by the design quality and sheer level of attention-to-detail, sweet!&rdquo;
+                        </blockquote>
+                        <h5>&mdash; Dan Gibson</h5>
+                        <span class="h6">Interface Designer</span>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6">
+                    <img alt="avatar" src="{{ asset('public/images/avatar-large-2.png') }}" />
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h3>News &amp; Views</h3>
+                    <p class="lead">
+                        We share our thoughts on design, business and life in general. Check out the blog for our latest musings.
+                    </p>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    
+        <div class="row">
+        {% for post in posts |slice(0, 3) %}
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="card card-4">
+                        <div class="card__image">
+                            <img alt="Pic" src="{{ asset('public/images/small9.jpg') }}" />
+                        </div>
+                        <div class="card__body boxed boxed--sm bg--white">
+                            <h6>{{ include('blog/_post_tags.html.twig') }}</h6>
+                            <div class="card__title">
+                                <h5>
+                                    <a href="{{ path('blog_post', {slug: post.slug}) }}">
+                                        {{ post.title }}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div class="card__lower">
+                                {{ post.summary|md2html }}
+                            </div>
+                                <span class="7"><i class="fa fa-calendar"></i> {{ post.publishedAt|localizeddate('long', 'medium', null, 'UTC') }}</span>
+                                <hr>
+                            <div class="card__lower">
+                                <span>por</span>
+                                <span class="h6"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% else %}
+            <div class="well">{{ 'post.no_posts_found'|trans }}</div>
+        {% endfor %}
+    </div>
+    
+    <section class="blog-snippet-1">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a class="btn" href="{{ path('blog_index') }}">
+                        <span class="btn__text">
+                            View the blog
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section class="bg--secondary partners-1 space--sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="slider" data-items="6" data-timing="3000">
+                        <ul class="slides">
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner1.png') }}" />
+                            </li>
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner2.png') }}" />
+                            </li>
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner4.png') }}" />
+                            </li>
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner3.png') }}" />
+                            </li>
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner5.png') }}" />
+                            </li>
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner6.png') }}" />
+                            </li>
+                            <li>
+                                <img alt="img" src="{{ asset('public/images/partner7.png') }}" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg--primary space--sm cta cta-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h4>Interested in working with Pillar?</h4>
+                    <a class="btn btn--sm" href="page-contact-form-simple.html">
+                        <span class="btn__text">
+                            Let's Talk Turkey
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+</div>
+    <!--div class="page-header">
+        <h1>{{ 'title.homepage'|trans|raw }}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="jumbotron">
+                <p>
+                    {{ 'help.browse_app'|trans|raw }}
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="{{ path('blog_index') }}">
+                        <i class="fa fa-users" aria-hidden="true"></i> {{ 'action.browse_app'|trans }}
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="jumbotron">
+                <p>
+                    {{ 'help.browse_admin'|trans|raw }}
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="{{ path('admin_index') }}">
+                        <i class="fa fa-lock" aria-hidden="true"></i> {{ 'action.browse_admin'|trans }}
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div-->
+{% endblock %}

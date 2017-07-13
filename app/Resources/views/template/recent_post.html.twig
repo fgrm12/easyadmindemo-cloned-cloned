@@ -1,0 +1,35 @@
+    <div class="row">
+        {% for post in posts |slice(0, 3) %}
+            <div class="col-md-4 col-sm-6">
+                <a href="#">
+                    <div class="card card-4">
+                        <div class="card__image">
+                            <img alt="Pic" src="{{ asset('public/images/small9.jpg') }}" />
+                        </div>
+                        <div class="card__body boxed boxed--sm bg--white">
+                            <h6>{{ include('blog/_post_tags.html.twig') }}</h6>
+                            <div class="card__title">
+                                <h5>
+                                    <a href="{{ path('blog_post', {slug: post.slug}) }}">
+                                        {{ post.title }}
+                                    </a>
+                                </h5>
+                            </div>
+                            <div class="card__lower">
+                                {{ post.summary|md2html }}
+                            </div>
+                                <span class="7"><i class="fa fa-calendar"></i> {{ post.publishedAt|localizeddate('long', 'medium', null, 'UTC') }}</span>
+                                <hr>
+                            <div class="card__lower">
+                                <span>por</span>
+                                <span class="h6"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% else %}
+            <div class="well">{{ 'post.no_posts_found'|trans }}</div>
+        {% endfor %}
+    </div>
+    <!--end of row-->

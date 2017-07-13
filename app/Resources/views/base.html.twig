@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ app.request.locale }}"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{% block title %}Symfony Demo application{% endblock %}</title>
+        <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap-flatly-3.3.7.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/font-awesome-4.6.3.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/font-lato.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/highlight-solarized-light.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap-tagsinput.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+            
+                        <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/font-awesome-4.6.3.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/font-lato.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/fonts/font.lora.css') }}" type="text/css" />
+            
+            
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-datetimepicker.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-tagsinput.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/bootstrap-flatly-3.3.7.min.css') }}">
+            
+            <link rel="stylesheet" href="{{ asset('public/css/main.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/theme.css') }}" type="text/css" media="all" />
+            
+            <link rel="stylesheet" href="{{ asset('public/css/socicon.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('public/css/iconsmind.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('public/css/interface-icons.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('public/css/owl.carousel.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('public/css/lightbox.min.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('public/css/highlight-solarized-light.css') }}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script>
+            $(document).ready(function(){
+                      if (!Modernizr.input.placeholder) {
+                        $j('input[type="text"]', 'header').each(function () {
+                
+                          if (!$j(this).val()) {
+                            this.value = $j(this).attr('placeholder');
+                          }
+                
+                          $j(this).focus(function () {
+                            if (this.value == $j(this).attr('placeholder')) {
+                              this.value = '';
+                            }
+                          });
+                
+                          $j(this).blur(function () {
+                            if (this.value == '') {
+                              this.value = $j(this).attr('placeholder');
+                            }
+                          });
+                
+                        });
+                      }
+                
+                }
+        </script>
+    </head>
+
+    <body id="{% block body_id %}{% endblock %}">
+        <header>
+            <!-- Prueba -->
+            <a id="top"></a>
+                    
+            <div class="loader"></div>
+            
+            <nav class="transition--fade">
+                {% embed 'template/headerContact.html.twig' %}{% endembed %}
+
+                {% embed 'template/navbar.html.twig' %}{% endembed %}
+
+                <div class="nav-mobile-toggle visible-sm visible-xs">
+                    <i class="icon-Align-Right icon icon--sm"></i>
+                </div>
+            </nav>
+            
+            {% embed 'template/notificacionesCarrito.html.twig' %}{% endembed %}
+        
+            {% embed 'template/buscador.html.twig' %}{% endembed %}
+            <!-- Fin Prueba -->
+            
+            
+            <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{{ path('homepage') }}">
+                            Symfony Demo
+                        </a>
+
+                        <button type="button" class="navbar-toggle"
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="sr-only">{{ 'menu.toggle_nav'|trans }}</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            {% block header_navigation_links %}
+                                <li>
+                                    <a href="{{ path('blog_index') }}">
+                                        <i class="fa fa-home" aria-hidden="true"></i> {{ 'menu.homepage'|trans }}
+                                    </a>
+                                </li>
+
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <li>
+                                        <a href="{{ path('admin_post_index') }}">
+                                            <i class="fa fa-lock" aria-hidden="true"></i> {{ 'menu.admin'|trans }}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            {% endblock %}
+
+                            {% if app.user %}
+                                <li>
+                                    <a href="{{ path('security_logout') }}">
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i> {{ 'menu.logout'|trans }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="locales">
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                    <span class="caret"></span>
+                                    <span class="sr-only">{{ 'menu.choose_language'|trans }}</span>
+                                </a>
+                                <ul class="dropdown-menu locales" role="menu" aria-labelledby="locales">
+                                    {% for locale in locales() %}
+                                        <li {% if app.request.locale == locale.code %}aria-checked="true" class="active"{% else %}aria-checked="false"{% endif %} role="menuitem"><a href="{{ path(app.request.get('_route', 'blog_index'), app.request.get('_route_params', [])|merge({_locale: locale.code})) }}">{{ locale.name|capitalize }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% block header %}{% endblock %}
+        </header>
+
+        {% block body %}
+            <div class="container body-container">
+                <div class="row">
+                    <div id="main" class="col-sm-9">
+                        {{ include('default/_flash_messages.html.twig') }}
+
+                        {% block main %}{% endblock %}
+                    </div>
+
+                    <div id="sidebar" class="col-sm-3">
+                        {% block sidebar %}
+                            {{ render_esi(controller('FrameworkBundle:Template:template', {
+                                'template': 'blog/about.html.twig',
+                                'sharedAge': 600,
+                                '_locale': app.request.locale
+                            })) }}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+
+        
+        {% embed 'template/footer.html.twig' %}{% endembed %}
+        
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
+            <script src="{{ asset('js/moment.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap-3.3.7.min.js') }}"></script>
+            <script src="{{ asset('js/highlight.pack.js') }}"></script>
+            <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap-tagsinput.min.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+            <script src="{{ asset('public/js/isotope.min.js') }}"></script>
+            <script src="{{ asset('public/js/ytplayer.min.js') }}"></script>
+            <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('public/js/lightbox.min.js') }}"></script>
+            <script src="{{ asset('public/js/twitterfetcher.min.js') }}"></script>
+            <script src="{{ asset('public/js/smooth-scroll.min.js') }}"></script>
+            <script src="{{ asset('public/js/scrollreveal.min.js') }}"></script>
+            <script src="{{ asset('public/js/parallax.js') }}"></script>
+            <script src="{{ asset('public/js/scripts.js') }}"></script>
+        {% endblock %}
+
+        {# it's not mandatory to set the timezone in localizeddate(). This is done to
+           avoid errors when the 'intl' PHP extension is not available and the application
+           is forced to use the limited "intl polyfill", which only supports UTC and GMT #}
+        <!-- Page rendered on {{ 'now'|localizeddate('long', 'long', null, 'UTC') }} -->
+    </body>
+</html>

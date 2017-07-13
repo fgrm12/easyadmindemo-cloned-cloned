@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+            <section class="imagebg height-60 parallax" data-overlay="8">
+                <div class="background-image-holder">
+                    <img alt="image" src="{{ asset('public/images/hero4.jpg') }}" />
+                </div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1>Video Showcase</h1>
+                            <p class="lead">Showcase a gallery of videos in a filterable grid</p>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </section>
+            <section class="wide-grid masonry masonry-videos bg--dark">
+                <div class="masonry__filters masonry__filters--outside text-center" data-filter-all-text="Show All"></div>
+                <div class="masonry__container masonry--animate">
+                    <div class="col-md-4 col-sm-6 col-xs-12 masonry__item" data-masonry-filter="documentary">
+                        <div class="portfolio-item portfolio-item-2 video-cover" data-scrim-bottom="9">
+                            <div class="background-image-holder">
+                                <img alt="image" src="{{ asset('public/images/small4.jpg') }}" />
+                            </div>
+                            <div class="portfolio-item__title">
+                                <h5>New York Beat</h5>
+                                <span>
+                                    <em>Documentary</em>
+                                </span>
+                            </div>
+                            <div class="video-play-icon video-play-icon--sm"></div>
+                            <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!--end item-->
+                    <div class="col-md-4 col-sm-6 col-xs-12 masonry__item" data-masonry-filter="music">
+                        <div class="portfolio-item portfolio-item-2 video-cover" data-scrim-bottom="9">
+                            <div class="background-image-holder">
+                                <img alt="image" src="{{ asset('public/images/small5.jpg') }}" />
+                            </div>
+                            <div class="portfolio-item__title">
+                                <h5>Luxury Problems</h5>
+                                <span>
+                                    <em>Music Video</em>
+                                </span>
+                            </div>
+                            <div class="video-play-icon video-play-icon--sm"></div>
+                            <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!--end item-->
+                    <div class="col-md-4 col-sm-6 col-xs-12 masonry__item" data-masonry-filter="advertisement">
+                        <div class="portfolio-item portfolio-item-2 video-cover" data-scrim-bottom="9">
+                            <div class="background-image-holder">
+                                <img alt="image" src="{{ asset('public/images/small6.jpg') }}" />
+                            </div>
+                            <div class="portfolio-item__title">
+                                <h5>Exposed</h5>
+                                <span>
+                                    <em>Advetisment</em>
+                                </span>
+                            </div>
+                            <div class="video-play-icon video-play-icon--sm"></div>
+                            <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!--end item-->
+                    <div class="col-md-4 col-sm-6 col-xs-12 masonry__item" data-masonry-filter="advertisement">
+                        <div class="portfolio-item portfolio-item-2 video-cover" data-scrim-bottom="9">
+                            <div class="background-image-holder">
+                                <img alt="image" src="{{ asset('public/images/small9.jpg') }}" />
+                            </div>
+                            <div class="portfolio-item__title">
+                                <h5>Hive Coworking</h5>
+                                <span>
+                                    <em>Advertisment</em>
+                                </span>
+                            </div>
+                            <div class="video-play-icon video-play-icon--sm"></div>
+                            <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!--end item-->
+                    <div class="col-md-4 col-sm-6 col-xs-12 masonry__item" data-masonry-filter="music">
+                        <div class="portfolio-item portfolio-item-2 video-cover" data-scrim-bottom="9">
+                            <div class="background-image-holder">
+                                <img alt="image" src="{{ asset('public/images/small1.jpg') }}" />
+                            </div>
+                            <div class="portfolio-item__title">
+                                <h5>Yonderman</h5>
+                                <span>
+                                    <em>Music Video</em>
+                                </span>
+                            </div>
+                            <div class="video-play-icon video-play-icon--sm"></div>
+                            <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!--end item-->
+                    <div class="col-md-4 col-sm-6 col-xs-12 masonry__item" data-masonry-filter="documentary">
+                        <div class="portfolio-item portfolio-item-2 video-cover" data-scrim-bottom="9">
+                            <div class="background-image-holder">
+                                <img alt="image" src="{{ asset('public/images/small10.jpg') }}" />
+                            </div>
+                            <div class="portfolio-item__title">
+                                <h5>A Life Downsized</h5>
+                                <span>
+                                    <em>Documentary</em>
+                                </span>
+                            </div>
+                            <div class="video-play-icon video-play-icon--sm"></div>
+                            <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    <!--end item-->
+                </div>
+                <!--end masonry container-->
+        </div>
+        </div>
+        <!--end of row-->
+        </div>
+        <!--end of container-->
+        </section>
+{% endblock %}

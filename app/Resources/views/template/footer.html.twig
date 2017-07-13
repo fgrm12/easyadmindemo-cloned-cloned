@@ -1,0 +1,59 @@
+    <footer class="bg--dark footer-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <img alt="logo" class="logo" src="{{ asset('public/images/logo-light.png') }}" />
+                    <p>
+                        <em>Digital Design Melbourne</em>
+                    </p>
+                    <ul class="footer__navigation">
+                             {% embed 'template/menu.html.twig' %}{% endembed %}
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-8">
+                    <h6>Noticias de Facebook</h6>
+                    <div class="twitter-feed">
+                        <div class="tweets-feed" data-widget-id="492085717044981760" data-amount="2"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-sm-12">
+                    <h6>Subscribe</h6>
+                    <p>
+                        Get monthly updates and free resources.
+                    </p>
+                    <form class="form--merge form--no-labels" action="http://mrareco.createsend.com/t/d/s/kieth/" method="post" id="subForm" data-error="Please fill all fields correctly." data-success="Thanks for signing up! Please check your inbox for confirmation email.">
+                        <p>
+                            <label for="fieldEmail">Email Address</label>
+                            <br />
+                            <input class="col-md-8 col-sm-6 validate-required validate-email" id="fieldEmail" name="cm-kieth-kieth" type="email" required />
+                        </p>
+                        <p>
+                            <button type="submit">Go</button>
+                        </p>
+                    </form>
+                    <h6>Connect with Us</h6>
+                    {% embed 'template/social-list.html.twig' %}{% endembed %}
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+        <div class="footer__lower">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 text-center-xs">
+                        <span class="type--fine-print">&copy; Copyright
+                            <span class="update-year">2016</span> Medium Rare - All Rights Reserved</span>
+                    </div>
+                    <div class="col-sm-6 text-right text-center-xs">
+                        <a href="#top" class="inner-link top-link">
+                            <i class="interface-up-open-big"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </div>
+    </footer>
+    

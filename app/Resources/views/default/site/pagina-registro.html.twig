@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block headerContact %} 
+    <div class="utility-bar bg--secondary">
+        <div class="nav-module left">
+            <span class="type--fine-print">Web Design & Development Melbourne</span>
+        </div>
+        <div class="nav-module left">
+            <span class="type--fine-print">(03) 9282 7732</span>
+        </div>
+        <div class="nav-module right hidden-xs">
+            {% embed 'include/social-list.html.twig' %}{% endembed %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+            <section class="height-100 cover cover-8">
+                <div class="col-md-7 col-sm-5">
+                    <div class="background-image-holder">
+                        <img alt="image" src="{{ asset('public/images/hero24.jpg') }}" />
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-7 bg--white text-center">
+                    <div class="pos-vertical-center">
+                        <img class="logo" alt="Pillar" src="{{ asset('public/images/logo-large-dark.png') }}" />
+                        <p class="lead">
+                            A beautiful collection of
+                            <br /> hand-crafted web components
+                        </p>
+                        <div class="text-left">
+                            <form method="post">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="input-with-icon">
+                                            <label>Username:</label>
+                                            <i class="icon icon-Male-2"></i>
+                                            <input type="text" name="name" placeholder="Username" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="input-with-icon">
+                                            <label>Email Address:</label>
+                                            <i class="icon icon-Mail-2"></i>
+                                            <input type="email" name="email" placeholder="you@yourwebsite.com" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="input-with-icon">
+                                            <label>Create Password:</label>
+                                            <i class="icon icon-Security-Check"></i>
+                                            <input type="password" name="password" placeholder="&bullet;&bullet;&bullet;&bullet;&bullet;&bullet;" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="input-checkbox">
+                                            <div class="inner"></div>
+                                            <input type="checkbox" />
+                                        </div>
+                                        <span class="type--fine-print">I agree to the
+                                            <a href="#">terms and conditions</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn--primary">Get Started</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+{% endblock %}

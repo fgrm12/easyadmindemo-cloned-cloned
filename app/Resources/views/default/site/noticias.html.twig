@@ -1,0 +1,377 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+        {% embed 'include/notificacionesCarrito.html.twig' %}{% endembed %}
+        {% embed 'include/buscador.html.twig' %}{% endembed %}
+        
+        <!--end of modal-container-->
+        <div class="main-container transition--fade">
+            <section class="height-50  page-title page-title--animate">
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1>Blog Cards</h1>
+                            <p class="lead">Showcase blog posts in a classic sidebar arrangement.</p>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="masonry masonry-blog">
+                                <div class="masonry__container masonry--animate">
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small5.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Travel</h6>
+                                                    <div class="card__title">
+                                                        <h5>Western Australia's top undiscovered hot spots</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Luke Gibson</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small8.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Marketing</h6>
+                                                    <div class="card__title">
+                                                        <h5>Advice for stirring your online community and fostering engagement</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Abby Bollard</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <div class="video-cover">
+                                                        <div class="background-image-holder">
+                                                            <img alt="image" src="{{ asset('public/images/small2.jpg') }}" />
+                                                        </div>
+                                                        <div class="video-play-icon "></div>
+                                                        <iframe src="https://player.vimeo.com/video/165428278?autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+                                                    </div>
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Technology</h6>
+                                                    <div class="card__title">
+                                                        <h5>Video: Mobile camera apps have reached saturation point</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Cameron Smith</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small3.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Environment</h6>
+                                                    <div class="card__title">
+                                                        <h5>Opinion: The looming environmental threat to Tuvalu is everyone's problem</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Trent Mosse</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small7.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Lifestyle</h6>
+                                                    <div class="card__title">
+                                                        <h5>Living large in a small apartment: One man's quest to downsize</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Cameron Smith</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small6.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Technology</h6>
+                                                    <div class="card__title">
+                                                        <h5>Good photography is the key to your online presence</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Robin Banks</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small1.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Travel</h6>
+                                                    <div class="card__title">
+                                                        <h5>Meet the couple who ran their online business from a tent</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Abby Bollard</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small9.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Lifestyle</h6>
+                                                    <div class="card__title">
+                                                        <h5>Do cities need to relax restrictions on coworking spaces?</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">David Cowan</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="col-sm-6 masonry__item">
+                                        <a href="#">
+                                            <div class="card card-4">
+                                                <div class="card__image">
+                                                    <img alt="Pic" src="{{ asset('public/images/small10.jpg') }}" />
+                                                </div>
+                                                <div class="card__body boxed boxed--sm bg--white">
+                                                    <h6>Lifestyle</h6>
+                                                    <div class="card__title">
+                                                        <h5>Opinion: Successful freelancers make desirable managers</h5>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card__lower">
+                                                        <span>by</span>
+                                                        <span class="h6">Pricilla Vaughn</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!--end item-->
+                                </div>
+                                <!--end masonry container-->
+                            </div>
+                            <!--end masonry-->
+                            <div class="pagination-container">
+                                <hr>
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#">
+                                            <span>&larr;</span>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>&rarr;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 hidden-sm hidden-xs">
+                            <div class="sidebar">
+                                <div class="sidebar__widget">
+                                    <h6>Search Site</h6>
+                                    <hr>
+                                    <form method="post">
+                                        <div class="input-with-icon">
+                                            <i class="icon-Magnifi-Glass2"></i>
+                                            <input type="search" placeholder="Type Here" />
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h6>Categories</h6>
+                                    <hr>
+                                    <ul class="link-list">
+                                        <li>
+                                            <a href="#">
+                                                Environment
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Food & Travel
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Lifestyle
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Marketing
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Technology
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h6>Tags</h6>
+                                    <hr>
+                                    <ul class="tag-cloud">
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Business
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Tourism
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Life
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Startup
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Design
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Tech
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Style
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn--sm btn--square">
+                                                <span class="btn__text">
+                                                    Environment
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--end widget-->
+                                <div class="sidebar__widget">
+                                    <h6>About Us</h6>
+                                    <hr>
+                                    <p>
+                                        We're a digital focussed collective working with individuals and businesses to establish rich, engaging online presences.
+                                    </p>
+                                </div>
+                                <!--end widget-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+
+
+{% endblock %}

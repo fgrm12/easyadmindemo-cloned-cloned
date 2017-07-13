@@ -1,0 +1,43 @@
+    <div class="nav-bar" data-fixed-at="200">
+        <div class="nav-module logo-module left">
+            <a href="{{ url('root') }}">
+                <img class="logo logo-dark" alt="logo" src="{{ asset('public/images/logo-dark.png') }}" />
+                <img class="logo logo-light" alt="logo" src="{{ asset('public/images/logo-light.png') }}" />
+            </a>
+        </div>
+        <!--Mdulo menu-->
+       <div class="nav-module menu-module left">
+            <ul class="menu">
+                {% embed 'template/menu.html.twig' %}{% endembed %}
+            </ul>
+        </div>
+        <!--Fin modulo menu-->
+        
+        <div class="nav-module right">
+            <a href="#" class="nav-function" data-notification-link="cart-overview">
+                <i class="interface-bag icon icon--sm"></i>
+                <span>{{ 'menu.profile'|trans }}</span>
+            </a>
+        </div>
+        <div class="nav-module right">
+            <a href="#" class="nav-function modal-trigger" data-modal-id="search-form">
+                <i class="interface-search icon icon--sm"></i>
+                <span>{{ 'menu.search'|trans }}</span>
+            </a>
+        </div>
+        
+        {% block header_navigation_links %}
+            <div class="nav-module right">
+                <a href="{{ path('blog_index') }}" class="nav-function">
+                    <i class="fa fa-home" aria-hidden="true"></i> {{ 'menu.root'|trans }}
+                </a>
+            </div>    
+            <div class="nav-module right">    
+                <a href="{{ path('admin_post_index') }}" class="nav-function">
+                    <i class="fa fa-lock" aria-hidden="true"></i> {{ 'menu.admin'|trans }}
+                </a>
+            </div>
+        {% endblock %}
+    </div>
+
+<!--Fin menu principal-->
